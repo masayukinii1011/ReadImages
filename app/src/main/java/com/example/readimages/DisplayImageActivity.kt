@@ -11,8 +11,11 @@ class DisplayImageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_image)
 
-        var path = intent.getStringExtra("path")
-        var bitmap = BitmapFactory.decodeFile(path)
+        //画像のURIを取り出す
+        val path = intent.getStringExtra("path")
+        //画像をBitmap形式に変換
+        val bitmap = BitmapFactory.decodeFile(path)
+        //ImageViewに画像をセット
         imageView.setImageBitmap(bitmap)
     }
 }
